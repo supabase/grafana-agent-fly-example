@@ -12,11 +12,15 @@ metrics:
     - name: ${FLY_APP_NAME}
       scrape_configs:
         - job_name: ${FLY_APP_NAME}
-          metrics_path: "/metrics"
+          metrics_path: "/customer/v1/privileged/metrics"
+          basic_auth:
+            username: service_role
+            password: ${SUPABASE_SERVICE_ROLE_SECRET}
           static_configs:
-            - targets: ["realtime-demo.fly.dev"]
+            - targets: ["sfxulppblhlhfdglqzxl.supabase.co"]
+
       remote_write:
         - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push
           basic_auth:
             username: 360452
-            password: ${REMOTE_WRITE_PASSWORD:-remote_write_password_not_set}
+            password: ${REMOTE_WRITE_PASSWORD}
