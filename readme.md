@@ -1,5 +1,5 @@
 
-# Using Grafana Cloud to Monitor your Supabase Cloud Deployment
+# Using Grafana Cloud with Supabase
 
 Sign up and get your API keys from Grafana Cloud.
 
