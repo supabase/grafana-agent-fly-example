@@ -1,0 +1,22 @@
+integrations:
+  agent:
+    enabled: false
+  node_exporter:
+    enabled: true
+
+metrics:
+  wal_directory: /tmp/wal
+  global:
+    scrape_interval: 5s
+  configs:
+    - name: ${FLY_APP_NAME}
+      scrape_configs:
+        - job_name: ${FLY_APP_NAME}
+          metrics_path: "/metrics"
+          static_configs:
+            - targets: ["realtime-demo.fly.dev"]
+      remote_write:
+        - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push
+          basic_auth:
+            username: 360452
+            password: ${REMOTE_WRITE_PASSWORD:-remote_write_password_not_set}
