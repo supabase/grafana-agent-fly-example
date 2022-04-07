@@ -6,6 +6,10 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
+[mounts]
+  source="grafana_agent_vol"
+  destination="/data"
+
 [env]
 
 [experimental]

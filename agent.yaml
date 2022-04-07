@@ -2,10 +2,10 @@ integrations:
   agent:
     enabled: false
   node_exporter:
-    enabled: true
+    enabled: false
 
 metrics:
-  wal_directory: /tmp/wal
+  wal_directory: /data/tmp/wal
   global:
     scrape_interval: 5s
   configs:
