@@ -5,17 +5,17 @@ integrations:
     enabled: false
 
 metrics:
-  wal_directory: /data/tmp/wal
+  wal_directory: /tmp/wal
   global:
     scrape_interval: 5s
   configs:
-    - name: ${FLY_APP_NAME}
+    - name: supa_prom_scraper
       scrape_configs:
-        - job_name: ${FLY_APP_NAME}
+        - job_name: supa_prom_scraper
           metrics_path: "/customer/v1/privileged/metrics"
           basic_auth:
             username: service_role
-            password: ${SUPABASE_SERVICE_ROLE_SECRET}
+            password: ${SUPABASESERVICEROLESECRET}
           static_configs:
             - targets: ["sfxulppblhlhfdglqzxl.supabase.co"]
 
@@ -23,4 +23,4 @@ metrics:
         - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push
           basic_auth:
             username: 360452
-            password: ${REMOTE_WRITE_PASSWORD}
+            password: ${REMOTEWRITEPASSWORD}
