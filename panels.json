@@ -1,0 +1,757 @@
+[
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 0,
+            "y": 0
+        },
+        "id": 2,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "node_load5{}",
+                "interval": "",
+                "legendFormat": "load_5 {{service_type}}",
+                "refId": "A"
+            }
+        ],
+        "title": "CPU Load 5",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 8,
+            "y": 0
+        },
+        "id": 4,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "auth_users_user_count{}",
+                "interval": "",
+                "legendFormat": "auth_users",
+                "refId": "A"
+            }
+        ],
+        "title": "Auth Users",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 16,
+            "y": 0
+        },
+        "id": 10,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "realtime_memory_bytes{service_type=\"middleware\"} / 1000 / 1000",
+                "interval": "",
+                "legendFormat": "realtime_memory",
+                "refId": "A"
+            }
+        ],
+        "title": "Realtime Memory (mb)",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 0,
+            "y": 6
+        },
+        "id": 8,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "replication_realtime_lag_bytes{} / 1000 / 1000",
+                "interval": "",
+                "legendFormat": "realtime_lag",
+                "refId": "A"
+            }
+        ],
+        "title": "Realtime Lag (mb)",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 8,
+            "y": 6
+        },
+        "id": 6,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "pluginVersion": "8.4.6",
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "pg_database_size_mb{}",
+                "interval": "",
+                "legendFormat": "database_size",
+                "refId": "A"
+            }
+        ],
+        "title": "Postgres DB Size (mb)",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 16,
+            "y": 6
+        },
+        "id": 12,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "pgbouncer_free_clients{}",
+                "hide": false,
+                "instant": false,
+                "interval": "",
+                "intervalFactor": 1,
+                "legendFormat": "free_clients",
+                "refId": "A"
+            },
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "pgbouncer_free_servers{}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "free_servers",
+                "refId": "B"
+            },
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "pgbouncer_used_clients{}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "used_clients",
+                "refId": "C"
+            },
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "pgbouncer_used_servers{}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "used_servers",
+                "refId": "D"
+            }
+        ],
+        "title": "PgBouncer Connections",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 0,
+            "y": 12
+        },
+        "id": 14,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "pg_stat_database_num_backends{}",
+                "interval": "",
+                "legendFormat": "num_backends",
+                "refId": "A"
+            }
+        ],
+        "title": "Postgres Current Connections",
+        "type": "timeseries"
+    },
+    {
+        "datasource": {
+            "type": "prometheus",
+            "uid": "grafanacloud-prom"
+        },
+        "fieldConfig": {
+            "defaults": {
+                "color": {
+                    "mode": "palette-classic"
+                },
+                "custom": {
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                        "legend": false,
+                        "tooltip": false,
+                        "viz": false
+                    },
+                    "lineInterpolation": "linear",
+                    "lineStyle": {
+                        "fill": "solid"
+                    },
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                        "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                        "group": "A",
+                        "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                        "mode": "off"
+                    }
+                },
+                "mappings": [],
+                "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                        {
+                            "color": "green",
+                            "value": null
+                        },
+                        {
+                            "color": "red",
+                            "value": 80
+                        }
+                    ]
+                }
+            },
+            "overrides": []
+        },
+        "gridPos": {
+            "h": 6,
+            "w": 8,
+            "x": 8,
+            "y": 12
+        },
+        "id": 16,
+        "options": {
+            "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+            },
+            "tooltip": {
+                "mode": "single",
+                "sort": "none"
+            }
+        },
+        "targets": [
+            {
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "grafanacloud-prom"
+                },
+                "exemplar": true,
+                "expr": "rate(supabase_usage_metrics_user_queries_total{}[1m])",
+                "interval": "",
+                "legendFormat": "user_queries_per_second",
+                "refId": "A"
+            }
+        ],
+        "title": "Postgres Query Rate (per second)",
+        "type": "timeseries"
+    }
+]

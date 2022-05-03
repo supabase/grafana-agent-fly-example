@@ -1,9 +1,10 @@
 
-# Using Grafana Cloud with Supabase
-
-Sign up and get your API keys from Grafana Cloud.
+# Supabase Prometheus Metrics & Grafana
+![Supabase Grafana dashboard](supabase-grafana-prometheus.png)
 
 ## Grafana Cloud API Keys
+
+Sign up and get your API keys from Grafana Cloud.
 
 Go to grafana.com > in the nav click my account > and then click `API Keys`
 
@@ -21,6 +22,12 @@ Go to grafana.com > in the nav click my account > and then click `details` for P
 ## Deploy on Fly
 
  * Sign up for Fly and run `fly deploy`
+
+## Default Grafana Dashboard
+
+See [panels.json](panels.json) for a quick Grafana layout. 
+
+Create a new dashboard and replace the `panels` value with this in the Grafana JSON Model.
 
 ## Useful Links
 https://grafana.com/docs/agent/latest/getting-started/create-config-file/
