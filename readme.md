@@ -33,4 +33,5 @@ Create a new dashboard and replace the `panels` value with this in the Grafana J
 https://grafana.com/docs/agent/latest/getting-started/create-config-file/
 
 
-
+## Exported metrics:
+A list of exported metrics can be found [here](./metrics.md)
