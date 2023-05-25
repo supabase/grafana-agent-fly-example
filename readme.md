@@ -35,3 +35,4 @@ https://grafana.com/docs/agent/latest/getting-started/create-config-file/
 
 ## Exported metrics:
 A list of exported metrics can be found [here](./metrics.md)
+
