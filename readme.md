@@ -21,7 +21,7 @@ Go to grafana.com > in the nav click my account > and then click `details` for P
 
 ## Deploy on Fly
 
- * Sign up for Fly and run `fly deploy`
+ * Sign up for Fly and run `fly deploy --config fly.toml`
 
 ## Default Grafana Dashboard
 
