@@ -2,37 +2,62 @@
 # Supabase Prometheus Metrics & Grafana
 ![Supabase Grafana dashboard](supabase-grafana-prometheus.png)
 
-## Grafana Cloud API Keys
+## 1. Setup Accounts
 
-Sign up and get your API keys from Grafana Cloud.
+* Create an account on Grafana (https://grafana.com)
+* Create an account on Fly.io (https://fly.io)
+* You should already have a Supabase account and a Supabase project
 
-Go to grafana.com > in the nav click my account > and then click `API Keys`
+## 2. Deploy the Grafana Agent on Fly.io
 
-## Grafana Cloud Prometheus Remote Write Endpoint
-
-Go to grafana.com > in the nav click my account > and then click `details` for Prometheus in your "Grafana Cloud Stack"
-
-## Setup Config
+### 2A. Create the app
 
  * Change the `app` name in the `fly.toml`
- * Make sure your `static_configs` `targets` is your Supbase project hostname
- * Make sure your `metrics_path` is correct in `agent.yaml`
- * Make sure your `remote_write` `url` is correct in `agent.yaml`
+ * Install the `flyctl` command-line tool: [flyctl installation instructions](https://fly.io/docs/hands-on/install-flyctl)
+ * Log into fly: `flyctl auth login`
+ * Create your fly app: `flyctl apps create`
+    * use the app name you added to `fly.toml`
+ 
+### 2B. Gather the necessary secrets
 
-## Deploy on Fly
+ * `SUPABASESERVICEROLESECRET`
+    * Supabase service role secret 
+    * found here: [https://supabase.com/dashboard/project/_/settings/api](https://supabase.com/dashboard/project/_/settings/api)
+ * `SUPABASEPROJECTURL`
+    * Supabase project url 
+    * found here: [https://supabase.com/dashboard/project/_/settings/api](https://supabase.com/dashboard/project/_/settings/api)
+    * exclude the `https://` part, for example: `zzzzzzzzzzzzzzzzzzzz.supabase.co`
+ * `REMOTEWRITEENDPOINT`
+    * Grafana prometheus remote write endpoint
+    * [Grafana Cloud](https://grafana.com) / My Account / Prometheus Details / (Remote Write Endpoint)
+ * `REMOTEUSERNAME`
+    * Grafana prometheus Username
+    * [Grafana Cloud](https://grafana.com) / My Account / Prometheus Details / (Username / Instance ID)
+ * `REMOTEWRITEPASSWORD`
+    * Grafana prometheus remote write password
+    * [Grafana Cloud](https://grafana.com) / My Account / Prometheus Details / (Password / API Key) / Generate now
+ * Set your `fly.io` secrets in the script: [set_secrets.sh](./set_secrets.sh)
+ * Set your fly secrets by executing the script: `./set_secrets.sh`
 
- * Sign up for Fly and run `fly deploy --config fly.toml`
+### 2C. Deploy the `Grafana Agent App` on `fly.io`
 
-## Default Grafana Dashboard
+This app will gather data from your Supabase project once per minute and ingest it into Grafana Cloud.
 
-See [panels.json](panels.json) for a quick Grafana layout. 
+ * Deploy your fly app: `fly deploy --config fly.toml`
 
-Create a new dashboard and replace the `panels` value with this in the Grafana JSON Model.
+## 3. Create the Grafana Dashboard
 
-## Useful Links
-https://grafana.com/docs/agent/latest/getting-started/create-config-file/
+ * [Grafana Cloud](https://grafana.com) / My Account / Grafana / Launch
+ * Menu / Dashboards / New / Import
+ * Upload JSON file: [panels-full.json](./panels-full.json)
 
 
-## Exported metrics:
+### Useful Links
+
+[https://grafana.com/docs/agent/latest/getting-started/create-config-file/](https://grafana.com/docs/agent/latest/getting-started/create-config-file/)
+
+
+### Exported metrics:
+
 A list of exported metrics can be found [here](./metrics.md)
 

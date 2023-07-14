@@ -17,10 +17,10 @@ metrics:
             username: service_role
             password: ${SUPABASESERVICEROLESECRET}
           static_configs:
-            - targets: ["sfxulppblhlhfdglqzxl.supabase.co"]
+            - targets: ["${SUPABASEPROJECTURL}"]
 
       remote_write:
-        - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push
+        - url: ${REMOTEWRITEENDPOINT}
           basic_auth:
-            username: 360452
+            username: ${REMOTEUSERNAME}
             password: ${REMOTEWRITEPASSWORD}
