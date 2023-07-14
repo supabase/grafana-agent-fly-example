@@ -1,6 +1,6 @@
 # fly.toml file generated for grafana-agent-dev on 2022-04-06T13:07:15-07:00
 
-app = "grafana-agent-dev"
+app = "my-app-name"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
