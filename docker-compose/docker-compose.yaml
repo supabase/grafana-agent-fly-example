@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  grafana-agent:
+    image: grafana/agent
+    container_name: grafana-agent
+    volumes:
+      - ../agent.yaml:/etc/agent/agent.yaml
+    environment:
+      - SUPABASESERVICEROLESECRET=${SUPABASESERVICEROLESECRET}
+      - SUPABASEPROJECTURL=${SUPABASEPROJECTURL}
+      - REMOTEWRITEENDPOINT=${REMOTEWRITEENDPOINT}
+      - REMOTEUSERNAME=${REMOTEUSERNAME}
+      - REMOTEWRITEPASSWORD=${REMOTEWRITEPASSWORD}
+    command:
+      - '--config.file=/etc/agent/agent.yaml'
+      - '--metrics.wal-directory=/etc/agent/data'
+      - '--config.expand-env'
