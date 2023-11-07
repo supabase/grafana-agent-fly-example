@@ -1,3 +1,7 @@
+# ⚠️ This repository has been deprecated and it is no longer maintained ⚠️
+## Please use the resources located at [supabase/supabase-grafana](https://github.com/supabase/supabase-grafana) instead.
+
+---
 
 # Supabase Prometheus Metrics & Grafana
 ![Supabase Grafana dashboard](supabase-grafana-prometheus.png)
